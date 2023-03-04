@@ -1,0 +1,21 @@
+---
+enum Sections {
+    RESUME = 'resume',
+    INFO = 'info',
+    PORTFOLIO = 'porfolio',
+}
+
+interface Props {
+    active?: Sections;
+}
+
+const { active } = Astro.props;
+---
+
+<div class="bg-neutral fixed top-0 left-0 min-h-screen">
+    <div>Resume</div>
+    <div>Info</div>
+    <div>Portfolio</div>
+    <div>Word</div>
+    <div>PDF</div>
+</div>

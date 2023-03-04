@@ -3,21 +3,23 @@ import JobTitle from '../components/basic/JobTitle.astro';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/basic/Section.astro';
 import Heading2 from '../components/basic/Heading2.astro';
+import NavBar from '../components/navigation/NavBar.astro';
 import Workplace from '../components/basic/Workplace.astro';
 ---
 
 <Layout title="Travis Griffiths CV">
 
-<div class="m-20">
+<div class="m-20 ">
 
+    <NavBar />
 
-
+    <div class="max-w-[800px] container mx-auto">
 
     <div class="text-center text-xl mb-12">
         <div>
             <div class="font-bold">Travis Griffiths</div>
             <div><a href="mailto:travis@travisgriffiths.com">travis@travisgriffiths.com</a></div>
-            <div>857-777-8729</div>
+            <div>+1 857-777-8729</div>
         </div>
     </div>
   
@@ -143,6 +145,6 @@ import Workplace from '../components/basic/Workplace.astro';
 
         </ul>
     </Section>
-
+    </div>
 </div>
 </Layout>
