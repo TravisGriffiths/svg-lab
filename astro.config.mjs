@@ -10,6 +10,8 @@ import tailwind from "@astrojs/tailwind";
 import lit from "@astrojs/lit";
 
 // https://astro.build/config
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind(), lit()]
 });
