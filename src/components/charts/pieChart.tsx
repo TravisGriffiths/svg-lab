@@ -19,10 +19,8 @@ export const PieChart: React.FC<PieChartProps> = ({ wedges }) => {
     const range = d3.scaleLinear().domain([0, max]).range([0, 2*Math.PI])
     const center = {x: 300, y: 200}
     const arcsEdges = [0, ...values].map((v) => range(v))
-    console.table(arcsEdges)
     const arcVals: StartStopsDeg[] = values.map((v, idx) => ({start: arcsEdges[idx], stop: range(v)}))
 
-    console.table(arcVals)
     const arcs = arcVals.map((v) => arcGenerator({
         innerRadius: 5, 
         outerRadius: 150,
