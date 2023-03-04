@@ -1,7 +1,6 @@
 ---
 import JobTitle from '../components/basic/JobTitle.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Section from '../components/basic/Section.astro';
 import Heading2 from '../components/basic/Heading2.astro';
 import Workplace from '../components/basic/Workplace.astro';
@@ -24,11 +23,16 @@ import Workplace from '../components/basic/Workplace.astro';
   
     <Section>
         <Heading2>Skills</Heading2>
-        Programming: Typescript, Javascript, Python, Ruby, HTML/CSS 
-        Frameworks: React, Flask, Ruby on Rails, Redux 
-        Data Analysis: Gathering, collation, and presentation of multi-dimensional data sets. 
-        Data Visualization: D3, Highcharts, Zingcharts, reactive dashboards 
-        Team software development: Git, Test-driven development (TDD), Scrum, Feature Design, Requirements gathering
+        <div class="text-med">
+        <ul>
+            <li><span class="font-semibold opacity-80">Programming</span>: Typescript, Javascript, Python, Ruby, HTML/CSS </li>
+            <li><span class="font-semibold opacity-80">Frameworks</span>: React, Flask, Ruby on Rails, Redux</li>
+            <li><span class="font-semibold opacity-80"> Data analysis</span>: Gathering, normalization and presentation of multi-dimensional data sets</li>
+            <li><span class="font-semibold opacity-80">Data visualization</span>: D3, raw SVG, Highcharts, Zingcharts, reactive dashboards </li>
+            <li><span class="font-semibold opacity-80">Team software development</span>: Git, Test-driven development (TDD), Scrum, Feature Design, Requirements gathering</li>
+        </ul>
+        
+        </div>
     </Section>
 
     <Heading2>Work Experience</Heading2>
