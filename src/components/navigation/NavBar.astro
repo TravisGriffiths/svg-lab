@@ -12,9 +12,10 @@ interface Props {
 }
 
 const { active } = Astro.props;
+// https://pub-479b04f83e964a22b45b4e6994250924.r2.dev
 ---
 <style>
-    .navbar {
+    .nav-item {
         fill: rgb(129, 132, 145);
     }
     .nav-item.selected {
@@ -62,7 +63,11 @@ const { active } = Astro.props;
     <div class={`p-4 nav-item resume-icon ${active === SectionNames.RESUME ? 'selected' : ''}`}><Icon icon="./light/file-lines" /></div>
     <div class="p-4 nav-item info-icon"><Icon icon="./dark/circle-info" /></div>
     <div class="p-4 nav-item portfolio-icon"><Icon icon="./dark/palette" /></div>
-    <div class="p-4 nav-item word-download"><Icon icon="./light/file-word" /></div>
-    <div class="p-4 nav-item pdf-download"><Icon icon="./light/file-pdf" />    </div>
+    <a href="https://pub-479b04f83e964a22b45b4e6994250924.r2.dev/Travis Griffiths CV.docx" download>
+        <div class="p-4 nav-item word-download"><Icon icon="./light/file-word" /></div>
+    </a>
+    <a href="https://pub-479b04f83e964a22b45b4e6994250924.r2.dev/Travis Griffiths CV.pdf" download>
+        <div class="p-4 nav-item pdf-download"><Icon icon="./light/file-pdf" />    </div>
+    </a>
 </div>
 
