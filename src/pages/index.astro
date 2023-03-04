@@ -1,65 +1,144 @@
 ---
+import JobTitle from '../components/basic/JobTitle.astro';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-
+import Section from '../components/basic/Section.astro';
+import Heading2 from '../components/basic/Heading2.astro';
+import Workplace from '../components/basic/Workplace.astro';
 ---
 
 <Layout title="Travis Griffiths CV">
 
+<div class="m-20">
 
-    <div class="">
-        Travis Griffiths
-        travis@travisgriffiths.com
-        857-777-8729
+
+
+
+    <div class="text-center text-xl mb-12">
+        <div>
+            <div class="font-bold">Travis Griffiths</div>
+            <div><a href="mailto:travis@travisgriffiths.com">travis@travisgriffiths.com</a></div>
+            <div>857-777-8729</div>
+        </div>
     </div>
   
-    
-    Skills
-    Programming: Typescript, Javascript, Python, Ruby, HTML/CSS 
-    Frameworks: React, Flask, Ruby on Rails, Redux 
-    Data Analysis: Gathering, collation, and presentation of multi-dimensional data sets. 
-    Data Visualization: D3, Highcharts, Zingcharts, reactive dashboards 
-    Team software development: Git, Test-driven development (TDD), Scrum, Feature Design, Requirements gathering
-    
-    Work Experience
-    Indigo Agriculture  		   			   					           Oct 2019-Present 
-    Senior Software Engineer
-    React/Redux Typescript interfacing Python Flask API and Postgres data store. 
-    Responsible for building, testing and deploying code to allow for data collection and verification for the creation of carbon credits.
-    Rebate   		   			   						      Oct 2018 – Oct 2019
-    Chief Technology Officer
-    Responsible for setting policy and goals for the development team. 
-    Manage and measure infrastructure expenditure. 
-    Suggest, design and oversee implementation of new features. 
-    Manage staffing, training and planning for multiple developer teams across 4 different countries in Southeast Asia.
-    Bespin Consulting   		   			   						Oct – Nov 2019
-    Software Engineering Velocity Consultant
-    Responsible to observe and report on software development processes and user experience delivery.
-    Observations spread across 6 teams in both South Korea and People's Republic of China
-    Cloudhealth Technologies   		   			   				      Jun 2013 – Oct 2018
-    Software Engineer
-    Design, build and test software to collection, analyze, and display AWS usage data for customers both small and very large. 
-    Focused on graphical display of large data sets as reconfigurable graphs using Angular/D3, with Ruby on Rails and many shards of MySQL data sources in the back.
-    All assets deployed in AWS cloud. Data analysis covered AWS, GCP, and Azure
-    Quant5   		   			   				    		     Apr 2012 – Aug 2013
-    Sr. Front End Web Programmer/Data Analyst
-    Create and test high end graphical visualizations of large datasets and analysis using D3.js, CoffeeScript Jasmine testing as well as give feedback on efficacy of data visualizations and mathematical analysis of customer data
-    RBM Technologies (OneDoor)   		   			   				    Feb 2011 – June 2012
-    Web Programmer
-    Create MVC web applications in Ruby on Rails and JavaScript to support customer needs to track and deploy national and international merchandising campaigns. 
-    Test and update older code.
-    Hitachi Data Systems   		   			   				    	      Jun 2010 – Feb 2011
-    Test Engineer
-    Build and automate tests for Hitachi storage products, primarily in Python programming language with support for Java, SQL, Perl and Linux shell scripts.
-    Document test coverage, and any additions to the shared functional library for test framework.
-    
-    ***Work experience prior to Computer Science degree is available upon request***
-    Education 
-    San Jose State University: Bachelor of Science in Computer Science 2009 
-    Concentration in Bioinformatics, Minors in Math and Economics 
-    IBM Leadership and Project Management courses 2001 
-    U.S. Army Primary Leadership Development Course, 1998 
-    Monterey Peninsula College: Associate of Arts, Foreign Language Korean 1996
-    
+    <Section>
+        <Heading2>Skills</Heading2>
+        Programming: Typescript, Javascript, Python, Ruby, HTML/CSS 
+        Frameworks: React, Flask, Ruby on Rails, Redux 
+        Data Analysis: Gathering, collation, and presentation of multi-dimensional data sets. 
+        Data Visualization: D3, Highcharts, Zingcharts, reactive dashboards 
+        Team software development: Git, Test-driven development (TDD), Scrum, Feature Design, Requirements gathering
+    </Section>
 
+    <Heading2>Work Experience</Heading2>
+    <Section>
+        <Workplace company="Indigo Agriculture" dates="2019-2023" />
+		 <JobTitle>Senior Software Engineer</JobTitle>  			   					           
+        <ul class="list-disc ml-8">
+            <li>React/Redux Typescript interfacing Python Flask API and Postgres data store</li>
+            <li>Designed, built, tested and deployed current headless CMS integration used for public educational materials</li>
+            <li>Responsible for working software for Carbon Data collection</li>
+            <li>Built multiple custom graphs and visualizations to designer specifications</li>
+            <li>Trasitioned to and successfully maintained a full remote work cycle</li>
+        </ul>
+    </Section>
+
+    <Section>
+        <Workplace company="Rebatemango" dates="Oct 2018 - Oct 2019" />
+        <JobTitle>Chief Technology Officer</JobTitle>
+        <ul class="list-disc ml-8">
+            <li>Set policy and goals for development team</li>
+            <li>Decided infrastructure buildout with an eye to maximize runway</li>
+            <li>Rapidly assembled developer teams in both Myanmar and Armenia to bring uptime and feature development into budget</li> 
+            <li>Reported to and interfaced with major stakeholders and customers all across East Asia</li>   
+        </ul>
+    </Section>
+
+
+    <Section>
+        <Workplace company="Bespin Consulting" dates="Oct - Nov 2018" />
+        <JobTitle>Software Delivery Velocity Consultant</JobTitle>
+
+        <ul class="list-disc ml-8">
+            <li>Observed and reported on practices and results for 6 teams spread across South Korea and Peoples Republic of China</li>
+            <li>Delivered practice specific report to senior management to improve delivery efficacy and velocity</li>
+        </ul>
+    </Section>
+  
+    <Section>
+        <Workplace company="Cloudhealth Technologies" dates="Jun 2013 - Oct 2018" />
+        <JobTitle>Software Engineer</JobTitle>
+
+        <ul class="list-disc ml-8">
+            <li>Design and build maximally flexible data visualization solution for large n-dimensional data sets</li>
+            <li>Build, test and deploy full stack features in Ruby on Rails on multi-sharded MySQL database and Angular/D3 on the client</li>
+            <li>Keep highly aware of all changes and features introduced in AWS cloud offerings</li>
+            <li>Run and maintain multiple systems and services fully deployed on AWS on a 24 hour basis</li>
+        </ul>
+
+    
+    </Section>
+
+    <Section>
+        <Workplace company="Quant5" dates="Apr 2012 - Aug 2013" />
+        <JobTitle>Programmer/Data Analyst</JobTitle>
+
+        <ul class="list-disc ml-8">
+            <li>Develop, test and deploy impactful and fully interactive data visualizations using D3</li>
+            <li>Perform deep mathematical analysis of customer data using R</li>
+        </ul>
+
+    </Section>
+
+    <Section>
+        <Workplace company="RBM (OneDoor)" dates="Feb 2011 - June 2012" />
+        <JobTitle>Full Stack Programmer</JobTitle>
+
+        <ul class="list-disc ml-8">
+            <li>Ruby on Rails development using jQuery for client programming</li>
+            <li>Completed significant refactoring of older code</li>
+        </ul>
+    </Section>
+
+    <Section>
+        <Workplace company="Hitachi Data Systems" dates="Jun 2010 - Feb 2011" />
+        <JobTitle>Test Engineer</JobTitle>
+
+        <ul class="list-disc ml-8">
+            <li>Build and deploy automated test code in Python</li>
+            <li>Debug failures, document and track all outstanding bugs</li>
+        </ul>
+
+    </Section>
+
+    <div class="font-bold text-med text-center mb-4">
+        Work Experience prior to 2010 available on request
+    </div>
+
+    <Heading2>Education</Heading2>
+
+    <Section>
+        <ul class="list-disc ml-8">
+            <li>
+                <span class="font-semibold opacity-80">San Jose State University</span> 
+                B.S. Computer Science, Bioinformatics concentration, minors in math and economics
+            </li>
+            <li>
+                <span class="font-semibold opacity-80">IBM</span>
+                Leadership and Project Management courses  
+            </li>
+            <li>
+                <span class="font-semibold opacity-80">U.S. Army</span>
+                Primary Leadership Development Course
+            </li>
+            <li>
+                <span class="font-semibold opacity-80">Monterey Peninsula College</span>
+                Associate of Arts, Foreign Language Korean 
+            </li>
+
+        </ul>
+    </Section>
+
+</div>
 </Layout>
