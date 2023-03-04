@@ -1,21 +1,68 @@
 ---
-enum Sections {
+import Icon from "../fontawesome/Icon.astro"
+
+export enum SectionNames {
     RESUME = 'resume',
     INFO = 'info',
     PORTFOLIO = 'porfolio',
 }
 
 interface Props {
-    active?: Sections;
+    active?: SectionNames;
 }
 
 const { active } = Astro.props;
 ---
+<style>
+    .navbar {
+        fill: rgb(129, 132, 145);
+    }
+    .nav-item.selected {
+        fill: white;
+    }
+    .nav-item {
+        -webkit-transition: background-color 1s ease-out;
+        -moz-transition: background-color 1s ease-out;
+        -o-transition: background-color 1s ease-out;
+        transition: background-color 1s ease-out;
+    }
+    .nav-item:hover {
+        background-color: #ECA400;
+    }
+    .nav-item:hover::after {
+        position: absolute;
+        left: 70px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 100px;
+    }
+    .resume-icon:hover::after {
+        top: 25px;
+        content: 'My Resume';
+    }
+    .info-icon:hover::after {
+        top: 85px;
+        content: 'About Me';
+    }
+    .portfolio-icon:hover::after {
+        top: 155px;
+        content: 'My Portfolio';
+    }
+    .word-download:hover::after {
+        top: 210px;
+        content: 'Download Resume in Word Format';
+    }
+    .pdf-download:hover::after {
+        top: 285px;
+        content: 'Download Resume in PDF Format';
+    }
+</style>
 
-<div class="bg-neutral fixed top-0 left-0 min-h-screen">
-    <div>Resume</div>
-    <div>Info</div>
-    <div>Portfolio</div>
-    <div>Word</div>
-    <div>PDF</div>
+<div class="bg-neutral fixed top-0 left-0 min-h-screen text-base-100 w-16 navbar">
+    <div class={`p-4 nav-item resume-icon ${active === SectionNames.RESUME ? 'selected' : ''}`}><Icon icon="./light/file-lines" /></div>
+    <div class="p-4 nav-item info-icon"><Icon icon="./dark/circle-info" /></div>
+    <div class="p-4 nav-item portfolio-icon"><Icon icon="./dark/palette" /></div>
+    <div class="p-4 nav-item word-download"><Icon icon="./light/file-word" /></div>
+    <div class="p-4 nav-item pdf-download"><Icon icon="./light/file-pdf" />    </div>
 </div>
+

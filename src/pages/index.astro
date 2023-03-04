@@ -2,6 +2,7 @@
 import JobTitle from '../components/basic/JobTitle.astro';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/basic/Section.astro';
+import { SectionNames } from '../components/navigation/NavBar.astro';
 import Heading2 from '../components/basic/Heading2.astro';
 import NavBar from '../components/navigation/NavBar.astro';
 import Workplace from '../components/basic/Workplace.astro';
@@ -11,7 +12,7 @@ import Workplace from '../components/basic/Workplace.astro';
 
 <div class="m-20 ">
 
-    <NavBar />
+    <NavBar active={SectionNames.RESUME}/>
 
     <div class="max-w-[800px] container mx-auto">
 
