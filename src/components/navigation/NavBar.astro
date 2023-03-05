@@ -9,7 +9,7 @@ export enum SectionNames {
 
 const { default: fileLines } = await import("/src/components/fontawesome/light/file-lines.svg?raw");
 const { default: infoIcon } = await import("/src/components/fontawesome/dark/circle-info.svg?raw");
-const { default: paletteIcon } = await import("/src/components/fontawesome/dark/palette.svg?raw");
+//const { default: paletteIcon } = await import("/src/components/fontawesome/dark/palette.svg?raw");
 const { default: wordIcon } = await import("/src/components/fontawesome/light/file-word.svg?raw");
 const { default: pdfIcon } = await import("/src/components/fontawesome/light/file-pdf.svg?raw");
 
@@ -19,7 +19,7 @@ interface Props {
 }
 
 const { active } = Astro.props;
-// https://pub-479b04f83e964a22b45b4e6994250924.r2.dev
+// background-color:  #F7F7F2;
 ---
 <style>
     .nav-item {
@@ -43,33 +43,42 @@ const { active } = Astro.props;
         font-size: 14px;
         font-weight: bold;
         width: 100px;
+        background-color: white;
+        z-index: 20;
+        opacity: 1;
+   
     }
     .resume-icon:hover::after {
         top: 25px;
         content: 'My Resume';
     }
     .info-icon:hover::after {
-        top: 85px;
-        content: 'About Me';
+        top: 95px;
+        content: 'About Travis';
     }
     .portfolio-icon:hover::after {
-        top: 155px;
+        top: 100px;
         content: 'My Portfolio';
     }
     .word-download:hover::after {
-        top: 210px;
+        top: 150px;
         content: 'Download Resume in Word Format';
     }
     .pdf-download:hover::after {
-        top: 285px;
+        top: 220px;
         content: 'Download Resume in PDF Format';
     }
 </style>
 
 <div class="bg-neutral fixed top-0 left-0 min-h-screen text-base-100 w-16 navbar">
-    <div class={`p-4 nav-item resume-icon ${active === SectionNames.RESUME ? 'selected' : ''}`}><Icon innerHTML={fileLines}/></div>
-    <div class="p-4 nav-item info-icon"><Icon innerHTML={infoIcon}/></div>
-    <div class="p-4 nav-item portfolio-icon"><Icon innerHTML={paletteIcon} /></div>
+    <a href="/">
+        <div class={`p-4 nav-item resume-icon ${active === SectionNames.RESUME ? 'selected' : ''}`}>
+            <Icon innerHTML={fileLines}/>
+        </div>
+    </a>
+    <a href="/about" ><div class={`p-4 nav-item info-icon ${active === SectionNames.INFO? 'selected' : ''}`}>
+        <Icon innerHTML={infoIcon}/></div></a>
+    <!-- <div class="p-4 nav-item portfolio-icon"><Icon innerHTML={paletteIcon} /></div> -->
     <a href="https://pub-479b04f83e964a22b45b4e6994250924.r2.dev/Travis Griffiths CV.docx" download>
         <div class="p-4 nav-item word-download"><Icon innerHTML={wordIcon} /></div>
     </a>

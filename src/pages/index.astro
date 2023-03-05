@@ -4,15 +4,14 @@ import Layout from '../layouts/Layout.astro';
 import Section from '../components/basic/Section.astro';
 import { SectionNames } from '../components/navigation/NavBar.astro';
 import Heading2 from '../components/basic/Heading2.astro';
-import NavBar from '../components/navigation/NavBar.astro';
 import Workplace from '../components/basic/Workplace.astro';
 ---
 
-<Layout title="Travis Griffiths CV">
+<Layout active={SectionNames.RESUME} title="Travis Griffiths CV">
 
 <div class="m-20 ">
 
-    <NavBar active={SectionNames.RESUME}/>
+
 
     <div class="max-w-[800px] container mx-auto">
 

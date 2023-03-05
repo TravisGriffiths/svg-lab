@@ -1,0 +1,44 @@
+---
+import { SectionNames } from '../components/navigation/NavBar.astro';
+import Layout from "../layouts/Layout.astro";
+---
+
+
+<Layout active={SectionNames.INFO} title="Travis Griffiths CV">
+
+    <div class="m-20 ">   
+        <div class="max-w-[800px] container mx-auto"> 
+
+
+            <div class="text-center mb-20 text-xl">About Travis</div>
+
+            <div>
+                <img class="w-80 float-left m-4" src="/public/travis.jpeg" />
+                <p class="mb-4">
+                    Travis is a lifelong learner, hacker and over-analyzer. He was a Signals Intelligence Analyst assigned to Korea 
+                    after attending the Defense Intelligence Institute. The failure rate from this training program tends to 
+                    exceed 80%. It is while doing intelligence analysis in Korea that the hacking started. The first coding was 
+                    simple scripts written on a command line to automate and accelerate daily work tasks. Afterwards the coding, 
+                    and problem solving didn’t stop. He attended San Jose State for computer science, with a focus on bioinformatics. 
+                    He has been coding professionally ever since.
+                </p>
+       
+                <p class="mb-4">
+                    Travis has been an integral part of building billion dollar companies from the ground up. He has taken part in and 
+                    assembled teams in several countries. He has worked for startups so small the entire company sat at the 
+                    same table. Flexibility and adaptability are attributes demonstrated over and over. 
+                </p>
+
+                <p class="mb-4">
+                    More recently, he has done considerable work to get the majority of his family farm converted over to a solar 
+                    facility using sheep grazing to maintain the site. This would provide power to over 3000 homes, continue 
+                    agricultural output simply by its maintenance plan and will start the very long process of restoring a 
+                    tiny bit of native prairie habitat back to native species and ecosystems. 
+                    
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</Layout>
