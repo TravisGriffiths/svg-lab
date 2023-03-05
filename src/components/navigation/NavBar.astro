@@ -7,6 +7,13 @@ export enum SectionNames {
     PORTFOLIO = 'porfolio',
 }
 
+const { default: fileLines } = await import("/src/components/fontawesome/light/file-lines.svg?raw");
+const { default: infoIcon } = await import("/src/components/fontawesome/dark/circle-info.svg?raw");
+const { default: paletteIcon } = await import("/src/components/fontawesome/dark/palette.svg?raw");
+const { default: wordIcon } = await import("/src/components/fontawesome/light/file-word.svg?raw");
+const { default: pdfIcon } = await import("/src/components/fontawesome/light/file-pdf.svg?raw");
+
+
 interface Props {
     active?: SectionNames;
 }
@@ -60,14 +67,14 @@ const { active } = Astro.props;
 </style>
 
 <div class="bg-neutral fixed top-0 left-0 min-h-screen text-base-100 w-16 navbar">
-    <div class={`p-4 nav-item resume-icon ${active === SectionNames.RESUME ? 'selected' : ''}`}><Icon icon="./light/file-lines" /></div>
-    <div class="p-4 nav-item info-icon"><Icon icon="./dark/circle-info" /></div>
-    <div class="p-4 nav-item portfolio-icon"><Icon icon="./dark/palette" /></div>
+    <div class={`p-4 nav-item resume-icon ${active === SectionNames.RESUME ? 'selected' : ''}`}><Icon innerHTML={fileLines}/></div>
+    <div class="p-4 nav-item info-icon"><Icon innerHTML={infoIcon}/></div>
+    <div class="p-4 nav-item portfolio-icon"><Icon innerHTML={paletteIcon} /></div>
     <a href="https://pub-479b04f83e964a22b45b4e6994250924.r2.dev/Travis Griffiths CV.docx" download>
-        <div class="p-4 nav-item word-download"><Icon icon="./light/file-word" /></div>
+        <div class="p-4 nav-item word-download"><Icon innerHTML={wordIcon} /></div>
     </a>
     <a href="https://pub-479b04f83e964a22b45b4e6994250924.r2.dev/Travis Griffiths CV.pdf" download>
-        <div class="p-4 nav-item pdf-download"><Icon icon="./light/file-pdf" />    </div>
+        <div class="p-4 nav-item pdf-download"><Icon innerHTML={pdfIcon}/>    </div>
     </a>
 </div>
 
