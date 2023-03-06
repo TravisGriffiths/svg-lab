@@ -8,12 +8,21 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="m-20 ">   
         <div class="max-w-[800px] container mx-auto"> 
-
+            <style>
+                .shaded {
+                    height: 240px;
+                    width: 320px;
+                    background-size: contain;
+                    background-position: center center;
+                    background-image: url('travis.jpeg');
+                    box-shadow: 0 0 8px 8px #F7F7F2 inset;
+                }
+            </style>
 
             <div class="text-center mb-20 text-xl">About Travis</div>
 
             <div>
-                <!-- <img class="w-80 float-left m-4" src="/src/public/travis.jpeg" /> -->
+                <div class="shaded float-left m-4"></div>
                 <p class="mb-4">
                     Travis is a lifelong learner, hacker and over-analyzer. He was a Signals Intelligence Analyst assigned to Korea 
                     after attending the Defense Intelligence Institute. The failure rate from this training program tends to 
